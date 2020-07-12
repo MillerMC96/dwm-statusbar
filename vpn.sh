@@ -7,6 +7,7 @@ case $BUTTON in
 esac
 
 status=$( piactl get connectionstate )
+echo "$status "
 
 while [ $status = "Connecting" ] || [ $status = "Disconnecting" ]
 do
