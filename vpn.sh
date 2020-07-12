@@ -14,7 +14,7 @@ do
     status=$( piactl get connectionstate )
 done
 
-pkill -RTMIN+10 dwmblocks
+pkill -RTMIN+1 dwmblocks
     
 #    if [ $status = "Connected" ] || [ $status = "Disconnected" ]
 #    then
