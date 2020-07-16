@@ -4,5 +4,5 @@ case $BUTTON in
 	1) setsid -f "$TERMINAL" -e htop ;;
 esac
 
-printf " CPU "
-sensors | awk '/Tdie:/{print $2}' | sed 's/+//g' | awk '{print $0" "}'
+temp=$( sensors | awk '/Tdie:/{print $2}' | sed 's/+//g' | awk '{print $0}' )
+printf " CPU %s \n" "$temp"
