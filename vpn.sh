@@ -7,29 +7,11 @@ case $BUTTON in
 esac
 
 status=$( piactl get connectionstate )
-echo "$status "
 
 while [ $status = "Connecting" ] || [ $status = "Disconnecting" ]
 do
     status=$( piactl get connectionstate )
 done
+echo "$status "
 
-pkill -RTMIN+1 dwmblocks
-    
-#    if [ $status = "Connected" ] || [ $status = "Disconnected" ]
-#    then
-#    status=$( piactl get connectionstate )
-#    echo "${status} "
-#    break
-#    fi
-
-
-#if [ $status = "Connected" ]
-#then
-#    printf "✓"
-#elif [ $status = "Connecting" ]
-#then
-#    printf "..."
-#else
-#    printf "X"
-#fi
+#pkill -RTMIN+1 dwmblocks
