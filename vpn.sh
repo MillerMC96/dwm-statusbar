@@ -1,5 +1,4 @@
 #!/bin/bash
-printf " VPN "
 
 case $BUTTON in
 	1) piactl connect ;;
@@ -12,6 +11,12 @@ while [ $status = "Connecting" ] || [ $status = "Disconnecting" ]
 do
     status=$( piactl get connectionstate )
 done
-echo "$status "
 
-#pkill -RTMIN+1 dwmblocks
+if [ $status = "Connected" ]
+then
+    icon="🔒"
+else
+    icon="🔓"
+fi
+
+printf " VPN $icon "
