@@ -20,4 +20,8 @@ Displays time and date
 
 ## vpn.sh
 
-Display status of VPN connection. Left click to connect to default region. Right click to disconnect.
+Displays status of VPN connection. Left click to connect to default region. Right click to disconnect.
+
+## volume.sh
+
+Displays volume.
