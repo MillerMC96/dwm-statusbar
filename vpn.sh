@@ -19,4 +19,4 @@ else
     icon="🔓"
 fi
 
-printf " VPN $icon "
+printf " VPN $icon \n"
