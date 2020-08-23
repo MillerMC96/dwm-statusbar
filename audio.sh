@@ -12,8 +12,8 @@ switch_source() {
 }
 
 case $BUTTON in
-	1) switch_source(1) ;;
-	3) switch_source(3) ;;
+	1) switch_source 1 ;;
+	3) switch_source 3 ;;
 esac
 
 vol=$( pamixer --get-volume )
