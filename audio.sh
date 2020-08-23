@@ -11,6 +11,11 @@ switch_source() {
     done
 }
 
+case $BUTTON in
+	1) switch_source(1) ;;
+	3) switch_source(3) ;;
+esac
+
 vol=$( pamixer --get-volume )
 printf " VOL "
 if [ $(pamixer --get-mute) = true ]
