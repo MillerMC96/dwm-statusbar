@@ -14,9 +14,9 @@ done
 
 if [ $status = "Connected" ]
 then
-    icon="🔒"
+    icon=""
 else
-    icon="🔓"
+    icon=""
 fi
 
 printf " VPN $icon \n"
