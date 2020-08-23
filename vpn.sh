@@ -2,7 +2,7 @@
 
 case $BUTTON in
 	1) piactl connect ;;
-        3) piactl disconnect ;;
+    3) piactl disconnect ;;
 esac
 
 status=$( piactl get connectionstate )
