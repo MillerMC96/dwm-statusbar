@@ -17,12 +17,15 @@ case $BUTTON in
 	3) switch_source 2 ;;
 esac
 
-vol=$( pamixer --get-volume )
-printf " VOL "
+# string of VOL
+VOLS=" VOL "
+PERCENT="%% \n"
+MUTES="MUTE"
+
+vol=$VOLS$( pamixer --get-volume )$PERCENT
 if [ $(pamixer --get-mute) = true ]
 then
-    printf "MUTE \n"
+    printf "$VOLS$MUTES \n"
 else
-    printf "$vol%% \n"
+    printf "$vol"
 fi
-
