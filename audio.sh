@@ -8,12 +8,13 @@ switch_source() {
         streamId=$(echo $stream|cut '-d ' -f1)
     
         pactl move-sink-input "$streamId" "$newSink"
+        pactl set-default-sink "$1"
     done
 }
 
 case $BUTTON in
-	1) switch_source 1 ;;
-	3) switch_source 3 ;;
+	1) switch_source 0 ;;
+	3) switch_source 2 ;;
 esac
 
 vol=$( pamixer --get-volume )
